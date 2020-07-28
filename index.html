@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c94bc5b649.js" type="text/javascript"></script>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="cal-section">
+        <main>  
+            <article>
+                <div class="container calculator-area">
+                    <div class="cal-wrapper">
+                        <form action="" name="calform">
+                            <div class="display-holder">
+                                <input type="text" name="display"  class="displayValue" id="myValue" placeholder="0" disabled>
+                            </div>
+                            <div class="btn-area">
+                                <div class="celar-area">
+                                    <input type="button" name="btnClear" class="btn  btn-secondary" id="clear" value="C" onclick="clearItem()">
+                                <input type="button" name="btnAllClear" class="btn  btn-secondary" id="allClear" value="AC" onclick="clearValue('')">
+                                </div>
+                                <br>
+                                <input type="button" name="btn7" class="btn btn-secondary all-btn" value="7" onclick="mycalfunction('7')">
+                                <input type="button" name="btn8" class="btn btn-secondary all-btn" value="8" onclick="mycalfunction('8')">
+                                <input type="button" name="btn9" class="btn btn-secondary all-btn" value="9" onclick="mycalfunction('9')">
+                                <input type="button" name="btnX" class="btn btn-primary all-btn" value="X" onclick="mycalfunction('*')">
+                                
+                                
+                                <br>
+                                <input type="button" name="btn4" class="btn btn-secondary all-btn" value="4" onclick="mycalfunction('4')">
+                                <input type="button" name="btn5" class="btn btn-secondary all-btn" value="5" onclick="mycalfunction('5')">
+                                <input type="button" name="btn" class="btn btn-secondary all-btn" value="6" onclick="mycalfunction('6')">
+                                <input type="button" name="minus" class="btn btn-danger all-btn" value="-" onclick="mycalfunction('-')">
+                                <br>
+                                <input type="button" name="btn1" class="btn  btn-secondary all-btn" value="1" onclick="mycalfunction('1')">
+                                <input type="button" name="btn2" class="btn  btn-secondary all-btn" value="2" onclick="mycalfunction('2')">
+                                <input type="button" name="btn3" class="btn  btn-secondary all-btn" value="3" onclick="mycalfunction('3')">
+                                <input type="button" name="btnadd" class="btn  btn-warning all-btn" value="+" onclick="mycalfunction('+')">
+                                <br>
+
+                                <input type="button" name="btnzero" class="btn  btn-secondary all-btn" value="0" onclick="mycalfunction('0')">
+                                <input type="button" name="btndot" class="btn  btn-secondary all-btn" value="." onclick="mycalfunction('.')">
+                                <input type="button" name="btnequal" class="btn  btn-secondary all-btn" value="=" onclick="equal()">
+                                <input type="button" name="btndived" class="btn  btn-dark all-btn" value="/" onclick="mycalfunction('/')">
+
+                                <br>
+                                <input type="button" name="btnrubel" class="btn  btn-info all-btn" id="rubel" value="Rubel" onclick="mycalfunction('Birsty Love You Umah')">
+                                <input type="button" name="btnmosto" class="btn  btn-info all-btn" id="mosto" value="Firozz" onclick="mycalfunction('Jannat i Need You')">
+                                <input type="button" name="btnadi" class="btn  btn-info all-btn" id="adi" value="Adi" onclick="mycalfunction('Fu** U Lima love u also')">
+                                <input type="button" name="btndfrnd" class="btn  btn-success all-btn" id="fnd" value="Friends" onclick="mycalfunction('Friends R Togeter Ever')">
+                                <input type="button" name="btndfrnd" class="btn  btn-success all-btn" id="budy"value="Budy" onclick="mycalfunction('Love U All Eid Mubarak')">
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+
+
+
+    <script type="text/javascript">
+        function mycalfunction(buttonValue){
+            calform.display.value +=buttonValue;
+            
+        }
+        function clearValue (clear){
+            calform.display.value= clear;
+        }
+        function clearItem(){
+            var allClear = calform.display.value;
+            calform.display.value=allClear.substr(0,allClear.length-1);
+        }
+        function equal(){
+            calform.display.value =eval(calform.display.value);
+        }
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
